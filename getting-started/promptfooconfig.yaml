@@ -4,14 +4,17 @@ description: 'Getting started'
 # Never commit real keys to source control.
 env:
   GEMINI_API_KEY: AIzaSyA7noy6IiIYqy2Na43oW_q1OrlEF_Uh884
-prompts:
-  
-  - file://prompt1.txt
-providers:
 
+prompts:
+  - file://prompt1.txt
+
+
+providers:
   - "google:gemini-2.5-flash"
   - "google:gemini-2.5-flash-lite"
-  # Or setup models from other providers# - anthropic:messages:claude-sonnet-4-5-20250929# - vertex:gemini-2.5-pro
+  # Or setup models from other providers
+  # - anthropic:messages:claude-sonnet-4-5-20250929
+  # - vertex:gemini-2.5-pro
 
 tests:
   - assert:
@@ -22,3 +25,4 @@ tests:
       # Verifica que haya un archivo CSS
       - type: contains
         value: 'styles.css'
+
