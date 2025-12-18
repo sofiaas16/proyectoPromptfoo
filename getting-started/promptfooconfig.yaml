@@ -1,25 +1,24 @@
-yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
 description: 'Getting started'
-Optionally set API keys here instead of exporting environment variables.
-Never commit real keys to source control.
+# Optionally set API keys here instead of exporting environment variables.
+# Never commit real keys to source control.
 env:
   GEMINI_API_KEY: AIzaSyA7noy6IiIYqy2Na43oW_q1OrlEF_Uh884
 prompts:
   
-file://prompt1.txt
+  - file://prompt1.txt
 providers:
-  
-"google:gemini-2.5-flash"
-"google:gemini-2.5-flash-lite"
-# Or setup models from other providers# - anthropic:messages:claude-sonnet-4-5-20250929# - vertex:gemini-2.5-pro
+
+  - "google:gemini-2.5-flash"
+  - "google:gemini-2.5-flash-lite"
+  # Or setup models from other providers# - anthropic:messages:claude-sonnet-4-5-20250929# - vertex:gemini-2.5-pro
 
 tests:
-  
-assert:# Verifica que haya un index.html
-type: contains
-    value: 'index.html'
+  - assert:
+      # Verifica que haya un index.html
+      - type: contains
+        value: 'index.html'
 
       # Verifica que haya un archivo CSS
-      
-type: contains
-      value: 'styles.css'
+      - type: contains
+        value: 'styles.css'
