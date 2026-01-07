@@ -18,11 +18,8 @@ providers:
 
 tests:
   - assert:
-      # Verifica que haya un index.html
       - type: contains
         value: 'index.html'
 
-      # Verifica que haya un archivo CSS
       - type: contains
         value: 'styles.css'
-
